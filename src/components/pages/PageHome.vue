@@ -30,13 +30,13 @@ export default {
 <style scoped>
 .body {
   background: #F9F9F9;
-  border-radius: 4vw 4vw 0 0;
-  padding: 6vw 0;
+  border-radius: min(4.2vw, 50px) min(4.2vw, 50px) 0 0;
+  padding: min(6.3vw, 75px) 0;
 }
 
 .block > h1 {
   font-size: 54px;
-  margin-bottom: 4vw;
+  margin-bottom: min(4.2vw, 50px);
 }
 
 .han-blue {
@@ -44,7 +44,7 @@ export default {
 }
 
 .heading {
-  margin-top: 6vw;
+  margin-top: min(6.9vw, 83px);
 }
 
 @media screen and (max-width: 767px) {

@@ -3,7 +3,7 @@
     <div class="photo">
       <div class="location">
         <img
-            src="../assets/icons/cardHotelSimpleLocation.png"
+            src="../assets/icons/cardHotelSimpleLocation.svg"
             alt="значок местоположения"
             class="location-icon"
         >
@@ -36,6 +36,13 @@ export default {
   box-shadow: 0 3px 12px rgba(18, 31, 67, 0.08);
   border-radius: 10px;
   overflow: hidden;
+  border: 2px solid transparent;
+  transition: border-color .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+}
+
+.card:hover {
+  border: 2px solid #A9C0F7;
 }
 
 .photo {

@@ -25,6 +25,7 @@ export default {
   column-gap: 40px;
   justify-content: center;
   align-items: center;
+  padding: 0 8px;
 }
 
 .menu::-webkit-scrollbar {
@@ -37,11 +38,14 @@ export default {
 
 @media screen and (max-width: 1199px) {
   .menu {
-    justify-content: start;
     background: #F5F6FA;
     border-top: 1px solid #E3E3E3;
     border-bottom: 1px solid #E3E3E3;
-
+  }
+}
+@media screen and (max-width: 575px) {
+  .menu {
+    justify-content: start;
   }
 }
 </style>

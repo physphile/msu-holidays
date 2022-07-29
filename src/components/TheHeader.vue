@@ -10,9 +10,10 @@
               col-xs-6"
       >
         <img
-            src="../assets/logo.png"
+            src="../assets/logo.svg"
             alt='логотип "Каникулы МГУ"'
             class="logo"
+            @click="$router.push('/')"
         >
       </div>
 
@@ -55,19 +56,20 @@ export default {
   height: 100%;
   max-width: 100%;
   object-fit: contain;
+  cursor: pointer;
 }
 
 .container {
-  margin-top: min(5vw, 50px);
+  margin-top: min(4.5vw, 54px);
 }
 
 .register-button {
   margin-right: 40px;
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 1199px) {
   .header {
-    row-gap: 5vw;
+    row-gap: min(1.7vw, 20px);
   }
 }
 </style>
