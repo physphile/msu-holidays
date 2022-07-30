@@ -85,7 +85,6 @@ export default {
 
 .book-button {
   margin-top: min(3.3vW, 40px);
-  margin-bottom: min(8.3vw, 100px);
 }
 
 @media screen and (max-width: 767px){

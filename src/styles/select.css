@@ -115,7 +115,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: none;
+    background: white;
     border: var(--vs-border-width) var(--vs-border-style) var(--vs-border-color);
     border-radius: var(--vs-border-radius);
     display: flex;

@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <header class="container">
     <div
         class="row header
             start-xs
@@ -32,11 +32,11 @@
                 col-xs-6
                 end-xs"
       >
-        <TheHeaderMenuItem class="hidden-xs hidden-sm register-button">Зарегестрироваться</TheHeaderMenuItem>
+        <TheHeaderMenuItem class="hidden-xs hidden-sm register-button" @click="$router.push('/registration')">Зарегестрироваться</TheHeaderMenuItem>
         <IrdomButtonColor>Войти</IrdomButtonColor>
       </div>
     </div>
-  </div>
+  </header>
 
 </template>
 
@@ -60,7 +60,7 @@ export default {
 }
 
 .container {
-  margin-top: min(4.5vw, 54px);
+  padding-top: min(4.5vw, 54px);
 }
 
 .register-button {

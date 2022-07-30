@@ -1,10 +1,15 @@
-import Home from '@/components/pages/PageHome';
+import PageHome from '@/components/pages/PageHome';
 import {createRouter, createWebHashHistory} from "vue-router";
+import PageRegistration from "@/components/pages/PageRegistration";
 
 const routes = [
     {
         path: '/',
-        component: Home
+        component: PageHome
+    },
+    {
+        path: '/registration',
+        component: PageRegistration
     }
 ];
 

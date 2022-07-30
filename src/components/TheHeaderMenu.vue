@@ -1,10 +1,10 @@
 <template>
-  <div class="menu">
+  <nav class="nav">
     <IrdomButtonText class="menu-item">Главная</IrdomButtonText>
     <IrdomButtonText class="menu-item">Пансионаты</IrdomButtonText>
     <IrdomButtonText class="menu-item">Горячие путёвки</IrdomButtonText>
     <IrdomButtonText class="menu-item">О проекте</IrdomButtonText>
-  </div>
+  </nav>
 
 </template>
 
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style scoped>
-.menu {
+.nav {
   height: 50px;
   display: flex;
   overflow-x: auto;
@@ -28,7 +28,7 @@ export default {
   padding: 0 8px;
 }
 
-.menu::-webkit-scrollbar {
+.nav::-webkit-scrollbar {
   display: none;
 }
 
@@ -37,14 +37,14 @@ export default {
 }
 
 @media screen and (max-width: 1199px) {
-  .menu {
+  .nav {
     background: #F5F6FA;
     border-top: 1px solid #E3E3E3;
     border-bottom: 1px solid #E3E3E3;
   }
 }
 @media screen and (max-width: 575px) {
-  .menu {
+  .nav {
     justify-content: start;
   }
 }

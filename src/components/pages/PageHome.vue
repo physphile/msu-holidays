@@ -1,20 +1,24 @@
 <template>
-  <div class="container">
-    <div class="block">
-      <h1 class="heading">Забронируй отдых<br>в <span class="han-blue">пансионатах МГУ</span><br>онлайн</h1>
+  <main>
+    <section class="container block mainblock">
+      <header class="header">
+        <h1>Забронируй отдых<br>в <span class="han-blue">пансионатах МГУ</span><br>онлайн</h1>
+      </header>
       <BookingCalculator/>
-    </div>
-  </div>
-  <div class="body">
-    <div class="container">
-      <div class="block">
-        <h1>Пансионаты</h1>
-        <ListHotelSimple/>
+    </section>
+    <div class="rounded-container">
+      <div class="container">
+        <section class="block">
+          <header class="header">
+            <h2>Пансионаты</h2>
+          </header>
+          <ListHotelSimple/>
+        </section>
       </div>
-
     </div>
+  </main>
+  <div class="background hidden-sm hidden-xs"></div>
 
-  </div>
 </template>
 
 <script>
@@ -28,29 +32,17 @@ export default {
 </script>
 
 <style scoped>
-.body {
-  background: #F9F9F9;
-  border-radius: min(4.2vw, 50px) min(4.2vw, 50px) 0 0;
-  padding: min(6.3vw, 75px) 0;
+.mainblock {
+  padding-bottom: min(8.3vw, 100px);
 }
 
-.block > h1 {
-  font-size: 54px;
-  margin-bottom: min(4.2vw, 50px);
-}
-
-.han-blue {
-  color: #3D62BB;
-}
-
-.heading {
-  margin-top: min(6.9vw, 83px);
-}
-
-@media screen and (max-width: 767px) {
-  .block > h1, .heading {
-    font-size: 32px;
-    text-align: center;
-  }
+.background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: url("../../assets/pageHomeBG.svg") center no-repeat;
 }
 </style>
