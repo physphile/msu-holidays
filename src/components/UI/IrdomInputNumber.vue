@@ -48,17 +48,17 @@ export default {
 
 <style scoped>
 .body {
-  border: 1px solid #e3e3e3;
+  border: 1px solid var(--color-disabled);
   height: 50px;
   border-radius: 8px;
-  background: white;
+  background: var(--card-bg-color);
   display: flex;
   padding: 12px 18px;
-  transition: border-color .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: border-color var(--hover-transition-duration) var(--hover-transition-timing-function);
 }
 
 .body:hover {
-  border-color: #3D62BB;
+  border-color: var(--color-primary);
 }
 
 .btn {
@@ -75,5 +75,6 @@ export default {
   display: flex;
   align-items: center;
   pointer-events: none;
+  color: var(--text-color-primary);
 }
 </style>

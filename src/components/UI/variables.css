@@ -1,0 +1,32 @@
+
+:root {
+    --color-primary: #3D62BB;
+    --color-primary-dark: #445273;
+    --color-primary-light: #A9C0F7;
+    --bg-color: white;
+    --rounded-container-bg-color: #F9F9F9;
+    --text-color-primary: black;
+    --card-bg-color: white;
+    --text-color-primary-contrast: white;
+    --text-color-secondary: #858585;
+    --color-disabled: #e3e3e3;
+    --hover-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    --hover-transition-duration: .2s;
+    --line-height: 140.52%;
+    --image-gradient: linear-gradient(360deg, rgba(33, 44, 71, 0.4) 18.7%, rgba(26, 37, 62, 0) 122.7%);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-primary: #A9C0F7;
+        --color-primary-dark: #3D62BB;
+        --color-primary-light: #445273;
+        --bg-color:#1d1d1d;
+        --rounded-container-bg-color: #232323;
+        --text-color-primary: #f3f3f3;
+        --text-color-primary-contrast: black;
+        --text-color-secondary: #858585;
+        --color-disabled: #666666;
+        --card-bg-color: #323232;
+    }
+}

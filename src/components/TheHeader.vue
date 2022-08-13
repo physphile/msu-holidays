@@ -10,9 +10,9 @@
               col-xs-6"
       >
         <img
-            src="../assets/logo.svg"
             alt='логотип "Каникулы МГУ"'
             class="logo"
+            src="../assets/logo.svg"
             @click="$router.push('/')"
         >
       </div>
@@ -32,7 +32,9 @@
                 col-xs-6
                 end-xs"
       >
-        <TheHeaderMenuItem class="hidden-xs hidden-sm register-button" @click="$router.push('/registration')">Зарегестрироваться</TheHeaderMenuItem>
+        <TheHeaderMenuItem class="hidden-xs hidden-sm register-button" @click="$router.push('/registration')">
+          Зарегестрироваться
+        </TheHeaderMenuItem>
         <IrdomButtonColor>Войти</IrdomButtonColor>
       </div>
     </div>
@@ -47,7 +49,22 @@ import TheHeaderMenuItem from "@/components/TheHeaderMenuItem";
 
 export default {
   name: "TheHeader",
-  components: {TheHeaderMenuItem, IrdomButtonColor, TheHeaderMenu}
+  components: {TheHeaderMenuItem, IrdomButtonColor, TheHeaderMenu},
+  mounted() {
+    this.changeLogo(window.matchMedia('(prefers-color-scheme: dark)').matches);
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+      this.changeLogo(event.matches);
+    });
+  },
+  methods: {
+    changeLogo(isDark) {
+      if (isDark) {
+        document.querySelector('.logo').src = require('../assets/logoLight.svg');
+      } else {
+        document.querySelector('.logo').src = require('../assets/logo.svg');
+      }
+    }
+  }
 };
 </script>
 

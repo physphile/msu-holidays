@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: "CardHotelSimple"
+  name: "PageHomeHotelListCard"
 };
 </script>
 
@@ -32,23 +32,22 @@ export default {
   align-items: stretch;
   width: 270px;
   height: 256px;
-  background: white;
+  background: var(--card-bg-color);
   box-shadow: 0 3px 12px rgba(18, 31, 67, 0.08);
   border-radius: 10px;
   overflow: hidden;
   border: 2px solid transparent;
-  transition: border-color .2s cubic-bezier(0.645, 0.045, 0.355, 1);
-
+  transition: border-color var(--hover-transition-duration) var(--hover-transition-timing-function);
 }
 
 .card:hover {
-  border: 2px solid #A9C0F7;
+  border: 2px solid var(--color-primary-light);
 }
 
 .photo {
   width: 100%;
   height: 209px;
-  background: linear-gradient(360deg, rgba(33, 44, 71, 0.4) 18.7%, rgba(26, 37, 62, 0) 122.7%), url('../assets/cardHotelSimplePhoto.png');
+  background: var(--image-gradient), url('../assets/pageHomeHotelListCardPhoto.png') center/120% no-repeat;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -64,6 +63,7 @@ export default {
   justify-content: center;
   font-weight: 500;
   cursor: pointer;
+  color: var(--text-color-primary)
 }
 
 .location {
@@ -97,7 +97,7 @@ export default {
   color: white;
   font-weight: 600;
   margin-bottom: 2px;
-  line-height: 140%;
+  line-height: var(--line-height);
 }
 
 .title {

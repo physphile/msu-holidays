@@ -16,14 +16,20 @@ export default {
 </script>
 
 <style>
+@import "./components/UI/variables.css";
 * {
   margin: 0;
   box-sizing: border-box;
   font-family: Inter, sans-serif;
 }
 
+:root {
+  background: url("./assets/pageHomeBG.svg") top no-repeat var(--bg-color);
+}
+
 h1, h2, h1 > span, h2 > span {
   font-family: Montserrat, sans-serif;
+  color: var(--text-color-primary);
 }
 
 h1, h2, h3, h4, h5, h6, span {
@@ -43,18 +49,21 @@ h3 {
   font-size: 24px;
 }
 
+
 .han-blue {
-  color: #3D62BB;
+  color: var(--color-primary);
 }
+
 .block {
   padding: min(6.3vw, 75px) 0;
 }
+
 .rounded-container {
-  background: #F9F9F9;
+  background: var(--rounded-container-bg-color);
   border-radius: min(4.2vw, 50px) min(4.2vw, 50px) 0 0;
 }
 
-.block  > .header {
+.block > .header {
   margin-bottom: min(4.2vw, 50px);
 }
 
@@ -62,6 +71,7 @@ h3 {
   h1, h2 {
     font-size: 32px;
   }
+
   h1 {
     text-align: center;
   }

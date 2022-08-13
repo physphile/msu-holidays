@@ -1,5 +1,7 @@
 <template>
-<button class="button"><slot></slot></button>
+  <button class="button">
+    <slot></slot>
+  </button>
 </template>
 
 <script>
@@ -13,12 +15,14 @@ export default {
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
-  transition: color .2s cubic-bezier(0.645, 0.045, 0.355, 1);;
+  transition: color var(--hover-transition-duration) var(--hover-transition-timing-function);
   border: none;
   background: none;
   padding: 0;
+  color: var(--text-color-primary);
 }
+
 .button:hover, .button:active {
-  color: #3D62BB;
+  color: var(--color-primary);
 }
 </style>

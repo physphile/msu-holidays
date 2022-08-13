@@ -39,8 +39,8 @@ export default {
 @media screen and (max-width: 1199px) {
   .nav {
     background: #F5F6FA;
-    border-top: 1px solid #E3E3E3;
-    border-bottom: 1px solid #E3E3E3;
+    border-top: 1px solid var(--color-disabled);
+    border-bottom: 1px solid var(--color-disabled);
   }
 }
 @media screen and (max-width: 575px) {

@@ -2,35 +2,43 @@
   <div class="body">
     <Datepicker
         v-model="value"
-        range
-        format="dd.MM.yyyy"
-        hideInputIcon
-        :enableTimePicker="false"
-        locale="ru"
-        selectText="Выбрать"
         :autoApply="true"
         :clearable="false"
-        placeholder="Заезд - выезд"
-        :minDate="new Date()"
+        :enableTimePicker="false"
         :maxDate="maxDate"
+        :minDate="new Date()"
+        class="datepicker"
+        format="dd.MM.yyyy"
+        hideInputIcon
+        locale="ru"
+        placeholder="Заезд - выезд"
+        range
+        selectText="Выбрать"
     />
     <img
-        src="../../assets/icons/irdomDatepicker.svg"
         alt="иконка календаря"
         class="calendar-icon"
+        src="../../assets/icons/irdomDatepicker.svg"
     >
   </div>
 </template>
 
 <script>
-import '@/styles/datepicker.css';
+
 import Datepicker from '@vuepic/vue-datepicker';
+import './datepicker.css'
 import {ru} from 'date-fns/locale';
 
 export default {
   name: "IrdomDatepicker",
   components: {
     Datepicker
+  },
+  mounted() {
+    this.switchDark(window.matchMedia('(prefers-color-scheme: dark)').matches);
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+      this.switchDark(event.matches);
+    });
   },
   props: {
     initialRange: {
@@ -40,17 +48,23 @@ export default {
       }
     }
   },
+  methods: {
+    switchDark(isDark) {
+      this.dark = isDark;
+    }
+  },
   computed: {
     maxDate() {
       const date = new Date();
       date.setDate(date.getDate() + 14);
       return date;
-    }
+    },
   },
   data() {
     return {
       value: this.initialRange[0] ? this.initialRange : '',
-      ru
+      ru,
+      dark: false
     };
   },
   watch: {
@@ -63,18 +77,14 @@ export default {
 </script>
 
 <style scoped>
+
 .calendar-icon {
   position: absolute;
-  top: calc(50% - 10px);
+  top: calc(50% - 16px);
   width: 20px;
   height: 20px;
   object-fit: contain;
   right: 18px;
   pointer-events: none;
-}
-
-.body {
-  position: relative;
-  height: 50px;
 }
 </style>

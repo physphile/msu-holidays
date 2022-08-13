@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import ListHotelSimple from "@/components/ListHotelSimple";
+import ListHotelSimple from "@/components/PageHomeHotelList";
 import BookingCalculator from "@/components/BookingCalculator";
 
 export default {
@@ -36,13 +36,13 @@ export default {
   padding-bottom: min(8.3vw, 100px);
 }
 
-.background {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  background: url("../../assets/pageHomeBG.svg") center no-repeat;
-}
+/*.background {*/
+/*  position: absolute;*/
+/*  left: 0;*/
+/*  top: 0;*/
+/*  width: 100vw;*/
+/*  height: 100vh;*/
+/*  z-index: -1;*/
+/*  background: url("../../assets/pageHomeBG.svg") center no-repeat;*/
+/*}*/
 </style>

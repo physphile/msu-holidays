@@ -15,9 +15,9 @@
       <div class="rounded-container">
         <div class="container">
           <form
+              class="form"
               @submit="submit()"
               @submit.prevent
-              class="form"
           >
             <div class="row middle-xs">
               <div class="col-md-2 col-xs-12">
@@ -28,9 +28,10 @@
               </div>
               <div class="col-md-6 col-xs-12">
                 <IrdomInputText
-                    type="text"
                     id="name"
+                    v-focus
                     placeholder="Введите имя"
+                    type="text"
                 />
               </div>
             </div>
@@ -43,9 +44,9 @@
               </div>
               <div class="col-md-6 col-xs-12">
                 <IrdomInputText
-                    type="email"
                     id="email"
                     placeholder="Введите свой e-mail"
+                    type="email"
                 />
               </div>
             </div>
@@ -58,8 +59,8 @@
               </div>
               <div class="col-md-6 col-xs-12">
                 <IrdomInputText
-                    type="tel"
                     id="tel"
+                    type="tel"
                 />
               </div>
             </div>
@@ -73,19 +74,19 @@
               </div>
               <div class="col-md-6 col-xs-12 password-wrap">
                 <IrdomInputText
-                    type="password"
                     id="password"
                     placeholder="Придумайте пароль"
+                    type="password"
                 />
                 <IrdomInputText
-                    type="password"
                     placeholder="Введите пароль повторно"
+                    type="password"
                 />
               </div>
               <div class="col-md-6 col-xs-12 col-md-offset-2 password-wrap">
                 <IrdomButtonColor
-                    type="submit"
                     class="submit-btn"
+                    type="submit"
                 >Зарегестрироваться
                 </IrdomButtonColor>
               </div>
@@ -100,16 +101,18 @@
 <script>
 import IrdomInputText from "@/components/UI/IrdomInputText";
 import IrdomButtonColor from "@/components/UI/IrdomButtonColor";
+import focus from "@/directives/focus"
 
 export default {
   name: "PageRegistration",
   components: {IrdomButtonColor, IrdomInputText},
+  directives: {focus},
   data() {
     return {
-        user: {
-          first_name: '',
+      user: {
+        first_name: '',
 
-        }
+      }
     }
   },
   methods: {
@@ -122,7 +125,7 @@ export default {
 
 <style scoped>
 .h4 {
-  color: #858585;
+  color: var(--text-color-secondary);
   font-weight: 500;
 }
 
@@ -139,9 +142,9 @@ export default {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 16px;
-  line-height: 140.52%;
+  line-height: var(--line-height);
   /* or 22px */
-  color: black;
+  color: var(--text-color-primary);
 }
 
 @media screen and (min-width: 768px) {
@@ -165,8 +168,9 @@ export default {
 .password-wrap {
   display: flex;
   flex-direction: column;
-  row-gap: min(2.4vw, 10px);
+  row-gap: min(4.8vw, 20px);
 }
+
 .submit-btn {
   margin-top: min(3.6vw, 40px);
   width: fit-content;
@@ -192,6 +196,7 @@ export default {
     border-radius: 8px;
     width: 100%;
   }
+
   .rounded-container {
     background: none;
   }
