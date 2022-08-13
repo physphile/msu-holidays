@@ -1,13 +1,20 @@
 <template>
   <div class="row">
-    <div class="col-md-8 col-xs-12 column" style="padding-left: 0;">
+    <div
+        class="col-md-8 col-xs-12 column"
+        style="padding-left: 0;"
+    >
       <IrdomSelect
           :options="HOTELS"
           placeholder="Пансионат"
+          v-model="order.hotel"
       />
     </div>
 
-    <div class="col-md-5 column" style="padding-left: 0;">
+    <div
+        class="col-md-5 column"
+        style="padding-left: 0;"
+    >
       <IrdomDatepicker
           :initial-range="[order.arrivalDate, order.departureDate]"
           @change="changeOrderDates($event)"
@@ -21,7 +28,11 @@
 
   </div>
   <div class="row">
-    <IrdomButtonColor class="book-button">Забронировать</IrdomButtonColor>
+    <IrdomButtonColor
+        class="book-button"
+        @click="book()"
+    >Забронировать
+    </IrdomButtonColor>
   </div>
 </template>
 
@@ -31,6 +42,7 @@ import IrdomSelect from "@/components/UI/IrdomSelect";
 import HOTELS from "@/data/constants";
 import IrdomButtonColor from "@/components/UI/IrdomButtonColor";
 import IrdomInputNumber from "@/components/UI/IrdomInputNumber";
+import {useOrderStore} from "@/stores/order";
 
 export default {
   name: "BookingCalculator",
@@ -40,7 +52,7 @@ export default {
       order: {
         arrivalDate: null,
         departureDate: null,
-        hotel: null,
+        hotel: undefined,
         guests: 1
       },
       HOTELS
@@ -67,6 +79,11 @@ export default {
         case 10:
           return 'гостей';
       }
+    },
+    book() {
+      const order = useOrderStore();
+      Object.assign(order, this.order);
+      this.$router.push('')
     }
   },
   computed: {
@@ -87,11 +104,12 @@ export default {
   margin-top: min(3.3vW, 40px);
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
   .book-button {
     width: 100%;
     border-radius: 8px;
   }
+
   .column {
     padding: 0;
   }
