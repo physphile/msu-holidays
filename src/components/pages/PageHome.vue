@@ -7,14 +7,12 @@
       <BookingCalculator/>
     </section>
     <div class="rounded-container">
-      <div class="container">
-        <section class="block">
+      <section class="container">
           <header class="header">
             <h2>Пансионаты</h2>
           </header>
           <ListHotelSimple/>
-        </section>
-      </div>
+      </section>
     </div>
   </main>
   <div class="background hidden-sm hidden-xs"></div>
@@ -35,14 +33,10 @@ export default {
 .mainblock {
   padding-bottom: min(8.3vw, 100px);
 }
-
-/*.background {*/
-/*  position: absolute;*/
-/*  left: 0;*/
-/*  top: 0;*/
-/*  width: 100vw;*/
-/*  height: 100vh;*/
-/*  z-index: -1;*/
-/*  background: url("../../assets/pageHomeBG.svg") center no-repeat;*/
-/*}*/
+@media screen and (max-width: 575px) {
+  .container {
+    padding-left: 4.8%;
+    padding-right: 4.8%;
+  }
+}
 </style>

@@ -1,6 +1,9 @@
 <template>
   <TheHeader/>
-  <router-view>
+  <router-view v-slot="{ Component, route }">
+    <transition :name="route.meta.transition || 'fade'">
+      <component :is="Component"/>
+    </transition>
   </router-view>
 
 </template>
@@ -17,6 +20,7 @@ export default {
 
 <style>
 @import "./components/UI/variables.css";
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -55,16 +59,19 @@ h3 {
 }
 
 .block {
-  padding: min(6.3vw, 75px) 0;
+  padding-top: min(6.3vw, 75px);
 }
 
 .rounded-container {
   background: var(--rounded-container-bg-color);
   border-radius: min(4.2vw, 50px) min(4.2vw, 50px) 0 0;
+  position: relative;
+  padding: min(5vw, 60px) 0;
+  min-height: 100vh;
 }
 
-.block > .header {
-  margin-bottom: min(4.2vw, 50px);
+section header {
+  margin-bottom: min(60px, 5vw);
 }
 
 @media screen and (max-width: 767px) {
@@ -76,4 +83,5 @@ h3 {
     text-align: center;
   }
 }
+
 </style>

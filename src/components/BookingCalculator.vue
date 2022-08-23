@@ -96,12 +96,12 @@ export default {
 
 <style scoped>
 .row {
-  row-gap: min(2.5vw, 30px);
+  row-gap: min(4vw, 30px);
   margin: 0;
 }
 
 .book-button {
-  margin-top: min(3.3vW, 40px);
+  margin-top: min(6.4vW, 40px);
 }
 
 @media screen and (max-width: 767px) {

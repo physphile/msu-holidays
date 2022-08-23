@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@vuepic/vue-datepicker": "^3.3.1",
+    "animate.css": "^4.1.1",
     "core-js": "^3.8.3",
     "flexboxgrid2": "^7.2.1",
     "pinia": "^2.0.17",

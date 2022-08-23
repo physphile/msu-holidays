@@ -2,6 +2,7 @@ import PageHome from '@/components/pages/PageHome';
 import {createRouter, createWebHashHistory} from "vue-router";
 import PageRegistration from "@/components/pages/PageRegistration";
 import PageBooking1 from "@/components/pages/PageBooking1";
+import PageProfile from "@/components/pages/PageProfile";
 
 const routes = [
     {
@@ -15,6 +16,10 @@ const routes = [
     {
         path: '/booking1',
         component: PageBooking1
+    },
+    {
+        path: '/profile',
+        component: PageProfile
     }
 ];
 

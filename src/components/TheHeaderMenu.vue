@@ -25,7 +25,7 @@ export default {
   column-gap: 40px;
   justify-content: center;
   align-items: center;
-  padding: 0 8px;
+  padding: 0 4.8%;
 }
 
 .nav::-webkit-scrollbar {
@@ -38,7 +38,7 @@ export default {
 
 @media screen and (max-width: 1199px) {
   .nav {
-    background: #F5F6FA;
+    background: var(--rounded-container-bg-color);
     border-top: 1px solid var(--color-disabled);
     border-bottom: 1px solid var(--color-disabled);
   }
@@ -46,6 +46,7 @@ export default {
 @media screen and (max-width: 575px) {
   .nav {
     justify-content: start;
+    margin: 0 -4.8%;
   }
 }
 </style>

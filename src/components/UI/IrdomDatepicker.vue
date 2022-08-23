@@ -77,10 +77,13 @@ export default {
 </script>
 
 <style scoped>
+.body {
+  position: relative;
+}
 
 .calendar-icon {
   position: absolute;
-  top: calc(50% - 16px);
+  top: calc(50% - 10px);
   width: 20px;
   height: 20px;
   object-fit: contain;

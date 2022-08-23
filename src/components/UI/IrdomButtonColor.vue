@@ -1,12 +1,18 @@
 <template>
-  <button class="button">
+  <button class="button" :class="{disabled: disabled}">
     <slot></slot>
   </button>
 </template>
 
 <script>
 export default {
-  name: "IrdomButtonColor"
+  name: "IrdomButtonColor",
+  props: {
+    disabled: {
+      type: Boolean,
+      default: false
+    }
+  }
 };
 </script>
 
@@ -22,8 +28,15 @@ export default {
   font-weight: 500;
   transition: background-color var(--hover-transition-duration) var(--hover-transition-timing-function);
 }
+
 .button:hover, button:active {
   background: var(--color-primary-dark);
+}
+
+.disabled, .disabled:hover, .disabled:active {
+  background: var(--color-disabled);
+  color: var(--text-color-primary);
+  cursor: default;
 }
 
 </style>

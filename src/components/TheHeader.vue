@@ -22,7 +22,6 @@
               col-xs-12
               last-xs
               initial-order-xl"
-          style="padding: 0"
       >
         <TheHeaderMenu/>
       </div>
@@ -87,6 +86,12 @@ export default {
 @media screen and (max-width: 1199px) {
   .header {
     row-gap: min(1.7vw, 20px);
+  }
+}
+@media screen and (max-width: 575px) {
+  .container {
+    padding-left: 4.8%;
+    padding-right: 4.8%;
   }
 }
 </style>

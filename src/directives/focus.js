@@ -1,6 +1,7 @@
 const focus = {
     mounted: (el) => {
-        el.focus()
+        el.focus();
+        console.log(el);
     }
 }
 
