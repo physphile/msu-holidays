@@ -2,16 +2,17 @@
   <main>
     <section class="container block mainblock">
       <header class="header">
-        <h1>Забронируй отдых<br>в <span class="han-blue">пансионатах МГУ</span><br>онлайн</h1>
+        <h1 class="animate__animated animate__fadeIn">Забронируй отдых<br>в <span
+            class="han-blue">пансионатах МГУ</span><br>онлайн</h1>
       </header>
-      <BookingCalculator/>
+      <PageHomeBookingCalculator/>
     </section>
     <div class="rounded-container">
       <section class="container">
-          <header class="header">
-            <h2>Пансионаты</h2>
-          </header>
-          <ListHotelSimple/>
+        <header class="header">
+          <h2 class="animate__animated animate__fadeIn">Пансионаты</h2>
+        </header>
+        <ListHotelSimple/>
       </section>
     </div>
   </main>
@@ -21,11 +22,11 @@
 
 <script>
 import ListHotelSimple from "@/components/PageHomeHotelList";
-import BookingCalculator from "@/components/BookingCalculator";
+import PageHomeBookingCalculator from "@/components/PageHomeBookingCalculator";
 
 export default {
   name: "PageHome",
-  components: {BookingCalculator, ListHotelSimple},
+  components: {PageHomeBookingCalculator, ListHotelSimple},
 };
 </script>
 
@@ -33,6 +34,7 @@ export default {
 .mainblock {
   padding-bottom: min(8.3vw, 100px);
 }
+
 @media screen and (max-width: 575px) {
   .container {
     padding-left: 4.8%;

@@ -79,6 +79,7 @@ export default {
   z-index: 1;
   border-radius: 10px;
   overflow: hidden;
+  background: var(--rounded-container-bg-color);
 }
 
 .active-background {
@@ -94,6 +95,7 @@ export default {
   animation: flipInX, fade;
   animation-duration: .8s;
 }
+
 @keyframes fade {
   from {
     opacity: 0;
@@ -108,8 +110,10 @@ export default {
   .active-background {
     border-radius: 0;
   }
+
   .sidebar {
     border: 1px solid var(--color-disabled);
+    background: var(--bg-color);
   }
 }
 </style>

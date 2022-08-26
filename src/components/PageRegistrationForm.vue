@@ -1,5 +1,6 @@
 <template>
   <form
+      ref="form"
       class="form"
       @submit="submit()"
       @submit.prevent
@@ -10,7 +11,6 @@
         <IrdomInputText
             id="name"
             v-focus
-            class="animate__animated animate__fadeInLeft"
             name="name"
             placeholder="Введите имя"
             type="text"
@@ -23,7 +23,6 @@
       <template #input>
         <IrdomInputText
             id="email"
-            class="animate__animated animate__fadeInLeft"
             name="email"
             placeholder="Введите свой e-mail"
             type="email"
@@ -38,7 +37,6 @@
       <template #input>
         <IrdomInputText
             id="tel"
-            class="animate__animated animate__fadeInLeft"
             name="tel"
             type="tel"
         />
@@ -52,7 +50,6 @@
       <template #input>
         <IrdomInputText
             id="new-password"
-            class="animate__animated animate__fadeInLeft"
             name="new-password"
             placeholder="Придумайте пароль"
             type="password"
@@ -64,7 +61,6 @@
       <template #input>
         <IrdomInputText
             id="new-password"
-            class="animate__animated animate__fadeInLeft"
             name="new-password"
             placeholder="Введите пароль повторно"
             type="password"
@@ -75,7 +71,7 @@
     <IrdomInputLabelWrapper>
       <template #input>
         <IrdomButtonColor
-            class="submit-btn animate__animated animate__fadeIn"
+            class="submit-btn"
             disabled
             type="submit"
         >Зарегестрироваться
@@ -100,7 +96,21 @@ export default {
     submit() {
       console.log('submit');
     }
-  }
+  },
+  mounted() {
+    this.$refs.form.querySelectorAll('.col-xs-12.col-xl-9').forEach((el, i) => {
+      if (el.children[0].localName === 'input') {
+        el.classList.add('animate__animated', 'animate__fadeInLeft');
+      } else {
+        el.classList.add('animate__animated', 'animate__fadeIn');
+      }
+
+      el.style.animationDelay = `${i / 10}s`;
+    });
+    this.$refs.form.querySelectorAll('form .col-xl-3.col-xs-12').forEach((label, i) => {
+      label.style.animationDelay = `${i / 10 + 0.5}s`
+    });
+  },
 }
 </script>
 
@@ -111,11 +121,13 @@ form {
   row-gap: 20px;
 
 }
+
 button {
   margin-top: min(3.6vw, 40px);
   width: fit-content;
   animation-delay: 1s;
 }
+
 @media screen and (max-width: 767px) {
   button {
     border-radius: 8px;

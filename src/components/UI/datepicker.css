@@ -19,7 +19,7 @@
     width: 100%;
     font-size: 1rem;
     line-height: 1.5rem;
-    padding: 6px 12px;
+    padding: 6px 18px;
     color: var(--dp-text-color);
     box-sizing: border-box
 }
@@ -790,7 +790,7 @@
 }
 
 .dp__main {
-    font-family:Inter, sans-serif;
+    font-family: Inter, sans-serif;
     user-select: none;
     box-sizing: border-box;
 }

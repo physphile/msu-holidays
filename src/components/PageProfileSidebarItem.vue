@@ -8,7 +8,8 @@
         alt=""
         class="icon"
     >
-    <slot></slot>
+    <slot>
+    </slot>
   </div>
 </template>
 
@@ -38,6 +39,12 @@ export default {
   color: var(--text-color-primary);
   padding: 18px;
   column-gap: 14px;
+  border-radius: 10px;
+  transition: background-color var(--hover-transition-duration) var(--hover-transition-timing-function);
+}
+
+.item:hover {
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .icon {
@@ -48,5 +55,11 @@ export default {
 
 .item:hover {
   cursor: pointer;
+}
+
+@media screen and (max-width: 1199px) {
+  .item {
+    border-radius: 0;
+  }
 }
 </style>

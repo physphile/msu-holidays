@@ -5,9 +5,10 @@
         style="padding-left: 0;"
     >
       <IrdomSelect
-          :options="HOTELS"
-          placeholder="Пансионат"
           v-model="order.hotel"
+          :options="HOTELS"
+          class="select"
+          placeholder="Пансионат"
       />
     </div>
 
@@ -17,11 +18,21 @@
     >
       <IrdomDatepicker
           :initial-range="[order.arrivalDate, order.departureDate]"
+          :maxDate="maxDate"
+          :minDate="new Date()"
+          class="animate__animated animate__fadeInLeft"
+          placeholder="Заезд – выезд"
+          range
+          style="animation-delay: .2s"
           @change="changeOrderDates($event)"
       />
     </div>
     <div class="col-md-3 column">
-      <IrdomInputNumber v-model="order.guests">
+      <IrdomInputNumber
+          v-model="order.guests"
+          class="animate__animated animate__fadeInRight"
+          style="animation-delay: .6s"
+      >
         {{ guestsText }}
       </IrdomInputNumber>
     </div>
@@ -29,7 +40,8 @@
   </div>
   <div class="row">
     <IrdomButtonColor
-        class="book-button"
+        class="book-button animate__animated animate__fadeIn"
+        style="animation-delay: 1s"
         @click="book()"
     >Забронировать
     </IrdomButtonColor>
@@ -45,7 +57,7 @@ import IrdomInputNumber from "@/components/UI/IrdomInputNumber";
 import {useOrderStore} from "@/stores/order";
 
 export default {
-  name: "BookingCalculator",
+  name: "PageHomeBookingCalculator",
   components: {IrdomInputNumber, IrdomButtonColor, IrdomSelect, IrdomDatepicker},
   data() {
     return {
@@ -89,7 +101,12 @@ export default {
   computed: {
     guestsText() {
       return this.order.guests + ' ' + this.getGuestsCorrectCase(this.order.guests);
-    }
+    },
+    maxDate() {
+      const date = new Date();
+      date.setDate(date.getDate() + 14);
+      return date;
+    },
   }
 };
 </script>
@@ -102,6 +119,11 @@ export default {
 
 .book-button {
   margin-top: min(6.4vW, 40px);
+}
+
+.select {
+  animation: fadeInLeft;
+  animation-duration: var(--animate-duration);
 }
 
 @media screen and (max-width: 767px) {

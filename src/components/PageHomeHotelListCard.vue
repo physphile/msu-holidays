@@ -3,9 +3,9 @@
     <div class="photo">
       <div class="location">
         <img
-            src="../assets/icons/cardHotelSimpleLocation.svg"
             alt="значок местоположения"
             class="location-icon"
+            src="../assets/icons/cardHotelSimpleLocation.svg"
         >
         <span class="location-name">Московская область</span>
       </div>

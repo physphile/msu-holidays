@@ -34,10 +34,12 @@
         <TheHeaderMenuItem class="hidden-xs hidden-sm register-button" @click="$router.push('/registration')">
           Зарегестрироваться
         </TheHeaderMenuItem>
-        <IrdomButtonColor>Войти</IrdomButtonColor>
+        <IrdomButtonColor @click="openLoginPopup()">Войти</IrdomButtonColor>
       </div>
     </div>
   </header>
+
+  <TheHeaderPopupLogin :show="show" @close="show=false"/>
 
 </template>
 
@@ -45,10 +47,16 @@
 import TheHeaderMenu from "@/components/TheHeaderMenu";
 import IrdomButtonColor from "@/components/UI/IrdomButtonColor";
 import TheHeaderMenuItem from "@/components/TheHeaderMenuItem";
+import TheHeaderPopupLogin from "@/components/TheHeaderPopupLogin";
 
 export default {
   name: "TheHeader",
-  components: {TheHeaderMenuItem, IrdomButtonColor, TheHeaderMenu},
+  components: {TheHeaderPopupLogin, TheHeaderMenuItem, IrdomButtonColor, TheHeaderMenu},
+  data() {
+    return {
+      show: false
+    }
+  },
   mounted() {
     this.changeLogo(window.matchMedia('(prefers-color-scheme: dark)').matches);
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
@@ -62,6 +70,9 @@ export default {
       } else {
         document.querySelector('.logo').src = require('../assets/logo.svg');
       }
+    },
+    openLoginPopup() {
+      this.show = true;
     }
   }
 };
@@ -88,6 +99,7 @@ export default {
     row-gap: min(1.7vw, 20px);
   }
 }
+
 @media screen and (max-width: 575px) {
   .container {
     padding-left: 4.8%;

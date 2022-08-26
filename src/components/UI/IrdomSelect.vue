@@ -1,7 +1,7 @@
 <template>
   <v-select
-      class="select"
       :clearable="false"
+      class="select"
   />
 </template>
 

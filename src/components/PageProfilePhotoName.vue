@@ -1,10 +1,10 @@
 <template>
   <div class="wrapper">
     <div
-         class="avatar animate__animated animate__rotateIn  "
-         :style="style"
+        :style="style"
+        class="avatar animate__animated animate__rotateIn  "
     >
-      {{FI}}
+      {{ FI }}
     </div>
     <div class="caption">
       <span class="name">Константин Константинопольский</span>
@@ -23,7 +23,7 @@ export default {
     }
   },
   computed: {
-    style () {
+    style() {
       this.changeFI();
       return this.avatarUrl ? `background: url(${this.avatarUrl})` : `background: var(--color-primary)`;
     }
@@ -83,6 +83,7 @@ export default {
 span {
   color: var(--text-color-primary)
 }
+
 .caption {
   display: flex;
   flex-direction: column;
@@ -95,6 +96,7 @@ span {
   font-weight: 600;
   margin-bottom: 8px;
 }
+
 .role {
   font-weight: 500;
   font-size: 16px;

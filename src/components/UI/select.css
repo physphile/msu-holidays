@@ -51,7 +51,7 @@
     /* Options */
     --vs-dropdown-option-bg: #000;
     --vs-dropdown-option-color: var(--vs-dropdown-color);
-    --vs-dropdown-option-padding: 3px 20px;
+    --vs-dropdown-option-padding: 8px 20px;
 
     /* Active State */
     --vs-dropdown-option--active-bg: var(--color-primary);
@@ -149,6 +149,7 @@
     padding: 12px 18px;
     transition: border-color var(--hover-transition-duration) var(--hover-transition-timing-function);
 }
+
 .vs__dropdown-toggle:hover {
     border-color: var(--color-primary);
 }

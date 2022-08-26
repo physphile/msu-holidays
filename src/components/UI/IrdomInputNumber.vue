@@ -2,8 +2,8 @@
   <div class="body">
     <button class="btn decrement" @click="decrement()">
       <img
-          src="../../assets/icons/irdomInputNumberMinus.svg"
           alt="значок минуса"
+          src="../../assets/icons/irdomInputNumberMinus.svg"
       >
     </button>
     <div class="slot">
@@ -12,8 +12,8 @@
 
     <button class="btn increment" @click="increment()">
       <img
-          src="../../assets/icons/irdomInputNumberPlus.svg"
           alt="значок плюса"
+          src="../../assets/icons/irdomInputNumberPlus.svg"
       >
     </button>
   </div>
@@ -36,7 +36,7 @@ export default {
     }
   },
   methods: {
-    increment () {
+    increment() {
       this.modelValue < 6 ? this.$emit('update:modelValue', this.modelValue + 1) : {};
     },
     decrement() {
@@ -69,6 +69,7 @@ export default {
   cursor: pointer;
   background: none;
 }
+
 .slot {
   flex-grow: 1;
   justify-content: center;

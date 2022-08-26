@@ -5,20 +5,19 @@
         :autoApply="true"
         :clearable="false"
         :enableTimePicker="false"
-        :maxDate="maxDate"
-        :minDate="new Date()"
         class="datepicker"
+
         format="dd.MM.yyyy"
         hideInputIcon
         locale="ru"
-        placeholder="Заезд - выезд"
-        range
         selectText="Выбрать"
+        v-bind="$attrs"
     />
     <img
         alt="иконка календаря"
-        class="calendar-icon"
+        class="calendar-icon animate__animated animate__fadeIn"
         src="../../assets/icons/irdomDatepicker.svg"
+        style="animation-delay: 1s"
     >
   </div>
 </template>
@@ -53,23 +52,16 @@ export default {
       this.dark = isDark;
     }
   },
-  computed: {
-    maxDate() {
-      const date = new Date();
-      date.setDate(date.getDate() + 14);
-      return date;
-    },
-  },
+
   data() {
     return {
-      value: this.initialRange[0] ? this.initialRange : '',
+      value: '',
       ru,
       dark: false
     };
   },
   watch: {
     value(newVal) {
-      console.log(newVal)
       this.$emit('change', newVal)
     }
   }

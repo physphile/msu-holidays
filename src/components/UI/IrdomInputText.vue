@@ -29,6 +29,7 @@ export default {
   line-height: var(--line-height);
   width: 100%;
 }
+
 .input:hover {
   border-color: var(--color-primary);
 }

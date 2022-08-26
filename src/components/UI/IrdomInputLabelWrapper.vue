@@ -1,14 +1,14 @@
 <template>
-<div class="row">
-  <div class="col-xs-12 col-xl-3">
-    <label :for="id">
-      <slot name="label" ></slot>
-    </label>
+  <div class="row">
+    <div class="col-xs-12 col-xl-3 animate__animated animate__fadeInDown">
+      <label :for="id">
+        <slot name="label"></slot>
+      </label>
+    </div>
+    <div class="col-xs-12 col-xl-9 input">
+      <slot name="input"></slot>
+    </div>
   </div>
-  <div class="col-xs-12 col-xl-9">
-    <slot name="input"></slot>
-  </div>
-</div>
 </template>
 
 <script>
@@ -32,10 +32,15 @@ label {
   /* or 22px */
   color: var(--text-color-primary);
 }
-div {
-  align-items: center;
-}
+
 .row {
   row-gap: min(2.4vw, 10px);
+  align-items: center;
+}
+
+.input {
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
 }
 </style>

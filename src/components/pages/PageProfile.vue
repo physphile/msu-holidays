@@ -1,36 +1,23 @@
 <template>
-  <section class="block">
-    <header class="container animate__animated animate__fadeIn">
-      <h2>Личный кабинет</h2>
-    </header>
-    <div class="rounded-container">
-      <div class="container">
-        <div class="content">
-          <div class="sidebar">
-            <PageProfileSidebar/>
-          </div>
-          <div class="photoName">
-            <PageProfilePhotoName/>
-          </div>
-          <div class="form">
-            <PageProfileForm></PageProfileForm>
-          </div>
-        </div>
-      </div>
+  <IrdomPageTemplate>
+    <template #heading>Личный кабинет</template>
+    <div class="content">
+      <PageProfileSidebar class="sidebar"/>
+      <PageProfilePhotoName class="photoName"/>
+      <PageProfileForm class="form"/>
     </div>
-  </section>
-
-
+  </IrdomPageTemplate>
 </template>
 
 <script>
 import PageProfilePhotoName from "@/components/PageProfilePhotoName";
 import PageProfileSidebar from "@/components/PageProfileSideabr";
 import PageProfileForm from "@/components/PageProfileForm";
+import IrdomPageTemplate from "@/components/UI/IrdomPageTemplate";
 
 export default {
   name: "PageProfile",
-  components: {PageProfileForm, PageProfileSidebar, PageProfilePhotoName}
+  components: {IrdomPageTemplate, PageProfileForm, PageProfileSidebar, PageProfilePhotoName},
 }
 </script>
 
@@ -50,31 +37,38 @@ h2 {
 
 .content {
   display: grid;
-  grid-template: "sidebar photoName"
-                  "sidebar form";
+  grid-template: "sidebar photo-name"
+                  "sidebar form"
+                  ". form";
   grid-template-columns: 4fr 8fr;
+  grid-template-rows: auto auto min-content;
   grid-column-gap: min(82px, 6.8%);
-
 }
+
 .sidebar {
   grid-area: sidebar;
 }
-.photoName {
-  grid-area: photoName;
 
+.photoName {
+  grid-area: photo-name;
+  margin-bottom: min(40px, 3.3%);
 }
+
 .form {
   grid-area: form;
 }
+
 @media screen and (max-width: 1199px) {
   .content {
-    grid-template: "photoName"
+    grid-template: "photo-name"
                     "sidebar"
                     "form";
   }
+
   .photoName {
     margin-bottom: min(30px, 7.2%);
   }
+
   .sidebar {
     margin-bottom: min(40px, 9.7%);
   }

@@ -1,11 +1,13 @@
 <template>
-  <div></div>
+  <div>
+    PageBooking2Sidebar
+  </div>
 </template>
 
 <script>
 export default {
-  name: "PageBooking1"
-};
+  name: "PageBooking2Sidebar"
+}
 </script>
 
 <style scoped>

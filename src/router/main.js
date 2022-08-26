@@ -1,8 +1,9 @@
 import PageHome from '@/components/pages/PageHome';
 import {createRouter, createWebHashHistory} from "vue-router";
 import PageRegistration from "@/components/pages/PageRegistration";
-import PageBooking1 from "@/components/pages/PageBooking1";
 import PageProfile from "@/components/pages/PageProfile";
+import PageBooking from "@/components/pages/PageBooking";
+import bookingRoutes from './booking'
 
 const routes = [
     {
@@ -14,13 +15,15 @@ const routes = [
         component: PageRegistration
     },
     {
-        path: '/booking1',
-        component: PageBooking1
-    },
-    {
         path: '/profile',
         component: PageProfile
+    },
+    {
+        path: '/booking',
+        component: PageBooking,
+        children: bookingRoutes
     }
+
 ];
 
 const router = createRouter({

@@ -14,6 +14,19 @@ import TheHeader from "@/components/TheHeader";
 export default {
   components: {
     TheHeader
+  },
+  mounted() {
+    this.updateBg(window.matchMedia('(prefers-color-scheme: dark)').matches);
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',  e => {
+      this.updateBg(e.matches);
+    })
+  },
+  methods: {
+    updateBg(isDark) {
+      document.querySelector('body').style.backgroundImage = isDark ?
+          `url(${require('@/assets/pageHomeBgLight.svg')})` :
+          `url(${require('@/assets/pageHomeBg.svg')}`
+    }
   }
 };
 </script>
@@ -27,8 +40,8 @@ export default {
   font-family: Inter, sans-serif;
 }
 
-:root {
-  background: url("./assets/pageHomeBG.svg") top no-repeat var(--bg-color);
+body {
+  background: url('@/assets/pageHomeBg.svg') top no-repeat var(--bg-color);
 }
 
 h1, h2, h1 > span, h2 > span {
@@ -67,7 +80,6 @@ h3 {
   border-radius: min(4.2vw, 50px) min(4.2vw, 50px) 0 0;
   position: relative;
   padding: min(5vw, 60px) 0;
-  min-height: 100vh;
 }
 
 section header {
@@ -83,5 +95,9 @@ section header {
     text-align: center;
   }
 }
-
+@media screen and (max-width: 1199px) {
+  .rounded-container {
+    background: none;
+  }
+}
 </style>

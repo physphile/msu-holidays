@@ -43,6 +43,7 @@ export default {
     border-bottom: 1px solid var(--color-disabled);
   }
 }
+
 @media screen and (max-width: 575px) {
   .nav {
     justify-content: start;
