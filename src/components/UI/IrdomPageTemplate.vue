@@ -39,6 +39,19 @@ header {
   line-height: var(--line-height);
 }
 
+@media screen and (max-width: 1199px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  h2 {
+    margin-bottom: 10px;
+  }
+  .subheading {
+    max-width: 100%;
+  }
+}
+
 @media screen and (max-width: 575px) {
   .container {
     padding-left: 4.8%;

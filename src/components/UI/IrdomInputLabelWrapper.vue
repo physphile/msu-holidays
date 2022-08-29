@@ -41,6 +41,5 @@ label {
 .input {
   display: flex;
   justify-content: flex-start;
-  overflow: hidden;
 }
 </style>
