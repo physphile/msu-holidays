@@ -74,8 +74,8 @@
 </template>
 
 <script>
-import IrdomStepProgressBar from "@/components/UI/IrdomStepProgressBar";
-import IrdomStepProgressBarItem from "@/components/UI/IrdomStepProgressBarItem";
+import IrdomStepProgressBar from "@/components/UI/StepProgressBar";
+import IrdomStepProgressBarItem from "@/components/UI/StepProgressBarItem";
 
 export default {
   name: "BookingProgressBar",

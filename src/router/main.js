@@ -1,8 +1,8 @@
-import PageHome from '@/components/pages/PageHome';
+import PageHome from '@/components/PageHome/Index';
 import {createRouter, createWebHashHistory} from "vue-router";
-import PageRegistration from "@/components/pages/PageRegistration";
-import PageProfile from "@/components/pages/PageProfile";
-import PageBooking from "@/components/pages/PageBooking";
+import PageRegistration from "@/components/PageRegistration/Index";
+import PageProfile from "@/components/PageProfile/Index";
+import PageBooking from "@/components/PageBooking/Index";
 import bookingRoutes from './booking'
 
 const routes = [

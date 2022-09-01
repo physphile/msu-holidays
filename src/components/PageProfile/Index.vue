@@ -10,10 +10,10 @@
 </template>
 
 <script>
-import PageProfilePhotoName from "@/components/PageProfilePhotoName";
-import PageProfileSidebar from "@/components/PageProfileSideabr";
-import PageProfileForm from "@/components/PageProfileForm";
-import IrdomPageTemplate from "@/components/UI/IrdomPageTemplate";
+import PageProfilePhotoName from "@/components/PageProfile/PhotoName";
+import PageProfileSidebar from "@/components/PageProfile/Sideabr";
+import PageProfileForm from "@/components/PageProfile/Form";
+import IrdomPageTemplate from "@/components/UI/PageTemplate";
 
 export default {
   name: "PageProfile",

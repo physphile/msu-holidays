@@ -122,13 +122,13 @@
 </template>
 
 <script>
-import IrdomInputLabelWrapper from "@/components/UI/IrdomInputLabelWrapper";
-import IrdomButtonRadioItem from "@/components/UI/IrdomButtonRadioItem";
-import IrdomInputText from "@/components/UI/IrdomInputText";
-import IrdomButtonColor from "@/components/UI/IrdomButtonColor";
-import IrdomButtonRadio from "@/components/UI/IrdomButtonRadio";
-import IrdomButtonText from "@/components/UI/IrdomButtonText";
-import IrdomDatepicker from "@/components/UI/IrdomDatepicker";
+import IrdomInputLabelWrapper from "@/components/UI/InputLabelWrapper";
+import IrdomButtonRadioItem from "@/components/UI/ButtonRadioItem";
+import IrdomInputText from "@/components/UI/InputText";
+import IrdomButtonColor from "@/components/UI/ButtonColor";
+import IrdomButtonRadio from "@/components/UI/ButtonRadio";
+import IrdomButtonText from "@/components/UI/ButtonText";
+import IrdomDatepicker from "@/components/UI/Datepicker";
 
 export default {
   name: "PageProfileForm",

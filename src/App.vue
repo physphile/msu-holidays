@@ -1,15 +1,13 @@
 <template>
   <TheHeader/>
-  <router-view v-slot="{ Component, route }">
-    <transition :name="route.meta.transition || 'fade'">
+  <router-view v-slot="{ Component   }">
       <component :is="Component"/>
-    </transition>
   </router-view>
 
 </template>
 
 <script>
-import TheHeader from "@/components/TheHeader";
+import TheHeader from "@/components/TheHeader/Index";
 
 export default {
   components: {
@@ -32,7 +30,7 @@ export default {
 </script>
 
 <style>
-@import "./components/UI/variables.css";
+@import "./components/UI/styles/variables.css";
 
 * {
   margin: 0;
@@ -44,7 +42,7 @@ body {
   background: url('@/assets/pageHomeBg.svg') top no-repeat var(--bg-color);
 }
 
-h1, h2, h1 > span, h2 > span {
+h1, h2, h1 > span, h2 > span, h3, h3 > span {
   font-family: Montserrat, sans-serif;
   color: var(--text-color-primary);
 }

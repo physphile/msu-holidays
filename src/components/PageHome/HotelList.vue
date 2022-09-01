@@ -7,14 +7,14 @@
 </template>
 
 <script>
-import PageHomeHotelListCard from "@/components/PageHomeHotelListCard";
+import PageHomeHotelListCard from "@/components/PageHome/HotelListCard";
 
 export default {
   name: "PageHomeHotelList",
   components: {PageHomeHotelListCard}
 };
 </script>
-
+s
 <style scoped>
 .row {
   row-gap: 30px;

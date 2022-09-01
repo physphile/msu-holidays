@@ -5,7 +5,7 @@
         <img
             alt="значок местоположения"
             class="location-icon"
-            src="../assets/icons/cardHotelSimpleLocation.svg"
+            src="../../assets/icons/cardHotelSimpleLocation.svg"
         >
         <span class="location-name">Московская область</span>
       </div>
@@ -47,7 +47,7 @@ export default {
 .photo {
   width: 100%;
   height: 209px;
-  background: var(--image-gradient), url('../assets/pageHomeHotelListCardPhoto.png') center/120% no-repeat;
+  background: var(--image-gradient), url('../../assets/pageHomeHotelListCardPhoto.png') center/120% no-repeat;
   border-radius: 10px;
   display: flex;
   flex-direction: column;

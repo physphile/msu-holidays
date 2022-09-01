@@ -83,9 +83,9 @@
 </template>
 
 <script>
-import IrdomInputLabelWrapper from "@/components/UI/IrdomInputLabelWrapper";
-import IrdomButtonColor from "@/components/UI/IrdomButtonColor";
-import IrdomInputText from "@/components/UI/IrdomInputText";
+import IrdomInputLabelWrapper from "@/components/UI/InputLabelWrapper";
+import IrdomButtonColor from "@/components/UI/ButtonColor";
+import IrdomInputText from "@/components/UI/InputText";
 import focus from "@/directives/focus";
 
 export default {

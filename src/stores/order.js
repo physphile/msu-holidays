@@ -1,14 +1,30 @@
 import {defineStore} from "pinia";
 
-export const useOrderStore = defineStore('order', {
-    state: () => {
-        return {
-            hotel: undefined,
-            arrivalDate: null,
-            departureDate: null,
-            guests: 1
-        };
+const useOrderStore = defineStore('order', {
+    state: () => ({
+        hotel: undefined,
+        arrivalDate: null,
+        departureDate: null,
+        guests: 1
+    }),
+    actions: {
+        set(order) {
+            this.hotel = order.hotel;
+            this.arrivalDate = order.arrivalDate;
+            this.departureDate = order.departureDate;
+            this.guests = order.guests;
+        }
     },
-
-    actions: {}
+    getters: {
+        get(state) {
+            return {
+                hotel: state.hotel,
+                arrivalDate: state.arrivalDate,
+                departureDate: state.departureDate,
+                guests: state.guests
+            }
+        }
+    }
 });
+
+export default useOrderStore;

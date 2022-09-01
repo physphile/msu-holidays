@@ -52,10 +52,10 @@
 </template>
 
 <script>
-import IrdomInputText from '@/components/UI/IrdomInputText'
-import IrdomPopup from "@/components/UI/IrdomPopup";
-import IrdomButtonText from "@/components/UI/IrdomButtonText";
-import IrdomButtonColor from "@/components/UI/IrdomButtonColor";
+import IrdomInputText from '@/components/UI/InputText'
+import IrdomPopup from "@/components/UI/Popup";
+import IrdomButtonText from "@/components/UI/ButtonText";
+import IrdomButtonColor from "@/components/UI/ButtonColor";
 
 export default {
   name: "TheHeaderPopupLogin",

@@ -4,7 +4,7 @@
     <template #subheading>Точная стоимость заявки будет рассчитана после внесения данных гостей и зависит от их статуса
       в МГУ
     </template>
-    <BookingProgressBar/>
+    <BookingProgressBar style="margin-bottom: 30px;"/>
 
     <PageBookingTemplate>
       <router-view/>
@@ -17,9 +17,9 @@
 </template>
 
 <script>
-import IrdomPageTemplate from "@/components/UI/IrdomPageTemplate";
-import PageBookingTemplate from "@/components/PageBookingTemplate";
-import BookingProgressBar from "@/components/BookingProgressBar";
+import IrdomPageTemplate from "@/components/UI/PageTemplate";
+import PageBookingTemplate from "@/components/PageBooking/Template";
+import BookingProgressBar from "@/components/PageBooking/ProgressBar";
 
 export default {
   name: "PageBooking",

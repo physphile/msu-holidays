@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import PageProfileSidebarItem from "@/components/PageProfileSidebarItem";
+import PageProfileSidebarItem from "@/components/PageProfile/SidebarItem";
 
 export default {
   name: "PageProfileSidebar",

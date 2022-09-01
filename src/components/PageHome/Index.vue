@@ -21,8 +21,8 @@
 </template>
 
 <script>
-import ListHotelSimple from "@/components/PageHomeHotelList";
-import PageHomeBookingCalculator from "@/components/PageHomeBookingCalculator";
+import ListHotelSimple from "@/components/PageHome/HotelList";
+import PageHomeBookingCalculator from "@/components/PageHome/BookingCalculator";
 
 export default {
   name: "PageHome",

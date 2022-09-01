@@ -17,9 +17,9 @@
 </template>
 
 <script>
-import PageRegistrationForm from "@/components/PageRegistrationForm";
-import IrdomPageTemplate from "@/components/UI/IrdomPageTemplate";
-import IrdomButtonText from "@/components/UI/IrdomButtonText";
+import PageRegistrationForm from "@/components/PageRegistration/Form";
+import IrdomPageTemplate from "@/components/UI/PageTemplate";
+import IrdomButtonText from "@/components/UI/ButtonText";
 
 export default {
   name: "PageRegistration",

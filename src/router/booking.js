@@ -1,11 +1,11 @@
-import PageBooking2Frame from "@/components/PageBooking2Frame";
-import PageBooking2Sidebar from "@/components/PageBooking2Sidebar";
-import PageBooking1Frame from "@/components/PageBooking1Frame";
-import PageBooking1Sidebar from "@/components/PageBooking1Sidebar";
-import PageBooking3Frame from "@/components/PageBooking3Frame";
-import PageBooking3Sidebar from "@/components/PageBooking3Sidebar";
-import PageBooking4Frame from "@/components/PageBooking4Frame";
-import PageBooking4Sidebar from "@/components/PageBooking4Sidebar";
+import PageBooking2Frame from "@/components/PageBooking/2/Frame";
+import PageBooking2Sidebar from "@/components/PageBooking/2/Sidebar";
+import PageBooking1Frame from "@/components/PageBooking/1/Frame";
+import PageBooking1Sidebar from "@/components/PageBooking/1/Sidebar";
+import PageBooking3Frame from "@/components/PageBooking/3/Frame";
+import PageBooking3Sidebar from "@/components/PageBooking/3/Sidebar";
+import PageBooking4Frame from "@/components/PageBooking/4/Frame";
+import PageBooking4Sidebar from "@/components/PageBooking/4/Sidebar";
 
 const routes = [
     {   path: '1',

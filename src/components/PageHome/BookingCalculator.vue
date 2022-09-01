@@ -17,7 +17,6 @@
         style="padding-left: 0;"
     >
       <IrdomDatepicker
-          :initial-range="[order.arrivalDate, order.departureDate]"
           :maxDate="maxDate"
           :minDate="new Date()"
           class="animate__animated animate__fadeInLeft"
@@ -49,12 +48,12 @@
 </template>
 
 <script>
-import IrdomDatepicker from "@/components/UI/IrdomDatepicker";
-import IrdomSelect from "@/components/UI/IrdomSelect";
+import IrdomDatepicker from "@/components/UI/Datepicker";
+import IrdomSelect from "@/components/UI/Select";
 import HOTELS from "@/data/constants";
-import IrdomButtonColor from "@/components/UI/IrdomButtonColor";
-import IrdomInputNumber from "@/components/UI/IrdomInputNumber";
-import {useOrderStore} from "@/stores/order";
+import IrdomButtonColor from "@/components/UI/ButtonColor";
+import IrdomInputNumber from "@/components/UI/InputNumber";
+import useOrderStore from "@/stores/order";
 
 export default {
   name: "PageHomeBookingCalculator",
@@ -93,9 +92,9 @@ export default {
       }
     },
     book() {
-      const order = useOrderStore();
-      Object.assign(order, this.order);
-      this.$router.push('')
+      let order = useOrderStore();
+      order.set(this.order);
+      this.$router.push({name: 'booking2'})
     }
   },
   computed: {

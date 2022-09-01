@@ -12,7 +12,7 @@
         <img
             alt='логотип "Каникулы МГУ"'
             class="logo"
-            src="../assets/logo.svg"
+            src="../../assets/logo.svg"
             @click="$router.push('/')"
         >
       </div>
@@ -44,10 +44,10 @@
 </template>
 
 <script>
-import TheHeaderMenu from "@/components/TheHeaderMenu";
-import IrdomButtonColor from "@/components/UI/IrdomButtonColor";
-import TheHeaderMenuItem from "@/components/TheHeaderMenuItem";
-import TheHeaderPopupLogin from "@/components/TheHeaderPopupLogin";
+import TheHeaderMenu from "@/components/TheHeader/Menu";
+import IrdomButtonColor from "@/components/UI/ButtonColor";
+import TheHeaderMenuItem from "@/components/TheHeader/MenuItem";
+import TheHeaderPopupLogin from "@/components/TheHeader/PopupLogin";
 
 export default {
   name: "TheHeader",
@@ -66,9 +66,9 @@ export default {
   methods: {
     changeLogo(isDark) {
       if (isDark) {
-        document.querySelector('.logo').src = require('../assets/logoLight.svg');
+        document.querySelector('.logo').src = require('../../assets/logoLight.svg');
       } else {
-        document.querySelector('.logo').src = require('../assets/logo.svg');
+        document.querySelector('.logo').src = require('../../assets/logo.svg');
       }
     },
     openLoginPopup() {

@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import IrdomButtonText from "@/components/TheHeaderMenuItem";
+import IrdomButtonText from "@/components/TheHeader/MenuItem";
 
 export default {
   name: "TheHeaderMenu",

@@ -25,7 +25,7 @@
 <script>
 
 import Datepicker from '@vuepic/vue-datepicker';
-import './datepicker.css'
+import './styles/datepicker.css'
 import {ru} from 'date-fns/locale';
 
 export default {
@@ -38,6 +38,12 @@ export default {
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
       this.switchDark(event.matches);
     });
+    this.$nextTick(() => {
+      if (this.initialRange && this.initialRange[0]) {
+        this.value = this.initialRange;
+      }
+    })
+
   },
   props: {
     initialRange: {
@@ -55,7 +61,7 @@ export default {
 
   data() {
     return {
-      value: '',
+      value: null,
       ru,
       dark: false
     };
